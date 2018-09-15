@@ -1,0 +1,22 @@
+extends ../templates/default
+
+block content
+  div(class='row')
+    div(class='col-md-4 col-md-offset-4')
+      div(class='panel panel-default')
+        div(class='panel-heading align-ceter')='Registro'
+        div(class='panel-body')
+          form(action='http://pruebao.mybluemix.net/signup' method='post')
+            div(class='form-group')
+              label(for="email")='Email'
+              input(type='email' name='email' id='email' placeholder='Email' class='form-control')
+            div(class='form-group')
+              label(for="nombre")='Nombre'
+              input(type='text' name='nombre' id='nombre' placeholder='Nombre' class='form-control')   
+            div(class='form-group')
+              label(for="doc")='Cedula'
+              input(type='doc' name='doc' id='doc' placeholder='C.C.' class='form-control')
+            div(class='form-group')
+              label(for="password")='Contraseña'
+              input(type='password' name='password' id='password' placeholder='Password' class='form-control')
+            button(type="submit" class='btn btn-default')='Resgistrarme'

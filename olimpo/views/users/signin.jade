@@ -1,0 +1,24 @@
+extends ../templates/default
+
+block content
+  div(class='row')
+    div(class='col-md-4 col-md-offset-4')
+
+      if message.length > 0
+        div(class='alert alert-success' role ='alert')=message
+
+
+      div(class='panel panel-default')
+         div(class='panel-heading align-ceter')='Iniciar Sesión'
+         div(class='panel-body')
+           form(action='http://pruebao.mybluemix.net/signin' method='post')
+             div(class='form-group')
+               label(for="email")='Email'
+               input(type='email' name='username' id='email' placeholder='Email' class='form-control')  
+             div(class='form-group')
+               label(for="password")='Contraseña'
+               input(type='password' name='password' id='password' placeholder='Password' class='form-control')       
+             button(type="submit" class='btn btn-default')='Iniciar Sesion'
+
+      if authmessage.length > 0
+        div(class='alert alert-danger' role ='alert')=authmessage       

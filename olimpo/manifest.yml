@@ -1,0 +1,7 @@
+--- 
+ application : 
+  - name: pruebao
+    host: pruebao
+    memory: 128M
+    services: 
+        - DBMySQL-Prueba1IBM 
